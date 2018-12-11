@@ -1,0 +1,63 @@
+﻿@model PantryOnline.Models.Recipe
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Recipe</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PageNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PageNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MakeAhead)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MakeAhead)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LongerRecipe)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LongerRecipe)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.GoodToFreeze)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GoodToFreeze)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IngredientsComplete)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IngredientsComplete)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StepsComplete)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StepsComplete)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
